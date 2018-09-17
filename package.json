@@ -1,0 +1,25 @@
+{
+  "name": "nimet",
+  "version": "0.0.1",
+  "description": "Create random Finnish names",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/sluukkonen/nimet",
+  "author": "Sakumatti Luukkonen",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "generate": "node generator.js",
+    "prepublish": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "ramda": "^0.25.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.3",
+    "xlsx": "^0.14.0"
+  }
+}
