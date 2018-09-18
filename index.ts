@@ -36,10 +36,10 @@ const fullName = (
   firstName: Generator<string>,
   middleName: Generator<string>,
   lastName: Generator<string>
-): Generator<[string, string]> => () => [
-  firstName() + " " + middleName(),
-  lastName()
-]
+): Generator<{ firstNames: string; lastName: string }> => () => ({
+  firstNames: firstName() + " " + middleName(),
+  lastName: lastName()
+})
 const either = <T>(g1: Generator<T>, g2: Generator<T>): Generator<T> => () =>
   Math.random() < 0.5 ? g1() : g2()
 
