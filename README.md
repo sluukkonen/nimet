@@ -1,10 +1,10 @@
-### Nimet
+# Nimet
 
 Create realistic Finnish names based on [DVV name statistics](https://www.avoindata.fi/data/fi/dataset/none)
 
 ## API
 
-# Full names
+### Full names
 
 ```typescript
 import { name, maleName, femaleName } from "nimet"
@@ -14,7 +14,7 @@ const randomMaleName = maleName() // => { firstNames: 'Hannu Christian', lastNam
 const randomFemaleName = femaleName() // => { firstNames: 'Elvi Kyllikki', lastName: 'Keskinen' }
 ```
 
-# Surnames
+### Surnames
 
 ```typescript
 import { surname } from "nimet"
@@ -22,7 +22,7 @@ import { surname } from "nimet"
 const randomSurname = surname() // => 'Latva'
 ```
 
-# Gender-specific names
+### Gender-specific names
 
 ```typescript
 import { maleFirstname, maleMiddlename } from "nimet"
