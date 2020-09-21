@@ -1,6 +1,6 @@
 ### Nimet
 
-Create realistic Finnish names
+Create realistic Finnish names based on [DVV name statistics](https://www.avoindata.fi/data/fi/dataset/none)
 
 ## API
 
