@@ -1,8 +1,8 @@
-import femaleFirstnames from "./f_first_names.json"
-import femaleMiddlenames from "./f_middle_names.json"
-import maleFirstnames from "./m_first_names.json"
-import maleMiddleNames from "./m_middle_names.json"
-import surnames from "./surnames.json"
+import * as femaleFirstnames from "./f_first_names.json"
+import * as femaleMiddlenames from "./f_middle_names.json"
+import * as maleFirstnames from "./m_first_names.json"
+import * as maleMiddleNames from "./m_middle_names.json"
+import * as surnames from "./surnames.json"
 
 type Generator<T> = () => T
 type Dataset<T> = Array<{ value: T; weight: number }>
@@ -38,7 +38,7 @@ const fullName = (
   lastName: Generator<string>
 ): Generator<{ firstNames: string; lastName: string }> => () => ({
   firstNames: firstName() + " " + middleName(),
-  lastName: lastName()
+  lastName: lastName(),
 })
 const either = <T>(g1: Generator<T>, g2: Generator<T>): Generator<T> => () =>
   Math.random() < 0.5 ? g1() : g2()
