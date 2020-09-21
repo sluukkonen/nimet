@@ -25,6 +25,30 @@ const sheets = [
 
 const writeFile = promisify(fs.writeFile)
 
+const sum = (array) => {
+  let sum = 0
+  let c = 0
+
+  for (let i = 0; i < array.length; i++) {
+    const y = array[i] - c
+    const t = sum + y
+    c = t - sum - y
+    sum = t
+  }
+
+  return sum
+}
+
+const cumsum = (array) => {
+  let result = new Array(array.length)
+
+  for (let i = 0; i < array.length; i++) {
+    result[i] = sum(array.slice(0, i + 1))
+  }
+
+  return result
+}
+
 for (const { filename, mapping } of sheets) {
   const workbook = xlsx.readFile(filename)
   Object.entries(mapping).forEach(([sheetname, outfile]) => {
@@ -36,9 +60,9 @@ for (const { filename, mapping } of sheets) {
       .slice(1)
     const names = R.map(([name]) => name, data)
     const weights = R.map(([, weight]) => Number(weight), data)
-    const totalWeight = R.sum(weights)
+    const totalWeight = sum(weights)
     const relativeWeights = R.map(weight => weight / totalWeight, weights)
-    const cumulativeRelativeWeights = R.scan(R.add, 0, relativeWeights).slice(1)
+    const cumulativeRelativeWeights = cumsum(relativeWeights)
     const processedData = R.zipWith(
       (value, weight) => ({ value, weight }),
       names,
