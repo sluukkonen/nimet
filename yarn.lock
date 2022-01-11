@@ -308,12 +308,10 @@ chalk@^4.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-codepage@~1.14.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/codepage/-/codepage-1.14.0.tgz#8cbe25481323559d7d307571b0fff91e7a1d2f99"
-  dependencies:
-    commander "~2.14.1"
-    exit-on-epipe "~1.0.1"
+codepage@~1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/codepage/-/codepage-1.15.0.tgz#2e00519024b39424ec66eeb3ec07227e692618ab"
+  integrity sha512-3g6NUTPd/YtuuGrhMnOMRjFc+LJw/bnMp3+0r/Wcz3IXUuCosKRJvMphm5+Q+bvTVGcJJuRvVLuYba+WojaFaA==
 
 color-convert@^1.9.0:
   version "1.9.3"
@@ -336,14 +334,6 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
-
-commander@~2.14.1:
-  version "2.14.1"
-  resolved "https://registry.npmjs.org/commander/-/commander-2.14.1.tgz#2235123e37af8ca3c65df45b026dbd357b01b9aa"
-
-commander@~2.17.1:
-  version "2.17.1"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -1092,17 +1082,15 @@ write@1.0.3:
   dependencies:
     mkdirp "^0.5.1"
 
-xlsx@^0.16.7:
-  version "0.16.7"
-  resolved "https://registry.yarnpkg.com/xlsx/-/xlsx-0.16.7.tgz#62fd6590addac7c4419daaaa2b0c5388015d5f69"
-  integrity sha512-Xc4NRjci2Grbh9NDk/XoaWycJurxEug1wwn0aJCmB0NvIMyQuHYq2muWLWGidYNZPf94aUbqm6K8Fbjd7gKTZg==
+xlsx@^0.17.5:
+  version "0.17.5"
+  resolved "https://registry.yarnpkg.com/xlsx/-/xlsx-0.17.5.tgz#78b788fcfc0773d126cdcd7ea069cb7527c1ce81"
+  integrity sha512-lXNU0TuYsvElzvtI6O7WIVb9Zar1XYw7Xb3VAx2wn8N/n0whBYrCnHMxtFyIiUU1Wjf09WzmLALDfBO5PqTb1g==
   dependencies:
     adler-32 "~1.2.0"
     cfb "^1.1.4"
-    codepage "~1.14.0"
-    commander "~2.17.1"
+    codepage "~1.15.0"
     crc-32 "~1.2.0"
-    exit-on-epipe "~1.0.1"
     ssf "~0.11.2"
     wmf "~1.0.1"
     word "~0.3.0"
